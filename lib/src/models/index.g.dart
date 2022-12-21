@@ -7,24 +7,18 @@ part of models;
 // **************************************************************************
 
 _$AppState$ _$$AppState$FromJson(Map<String, dynamic> json) => _$AppState$(
-      auth: json['auth'] == null
-          ? const AuthState()
-          : AuthState.fromJson(json['auth'] as Map<String, dynamic>),
+      auth: json['auth'] == null ? const AuthState() : AuthState.fromJson(json['auth'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$AppState$ToJson(_$AppState$ instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$AppState$ToJson(_$AppState$ instance) => <String, dynamic>{
       'auth': instance.auth,
     };
 
 _$AuthState$ _$$AuthState$FromJson(Map<String, dynamic> json) => _$AuthState$(
-      user: json['user'] == null
-          ? null
-          : AppUser.fromJson(json['user'] as Map<String, dynamic>),
+      user: json['user'] == null ? null : AppUser.fromJson(json['user'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$AuthState$ToJson(_$AuthState$ instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$AuthState$ToJson(_$AuthState$ instance) => <String, dynamic>{
       'user': instance.user,
     };
 
@@ -35,8 +29,7 @@ _$AppUser$ _$$AppUser$FromJson(Map<String, dynamic> json) => _$AppUser$(
       imageUrl: json['imageUrl'] as String?,
     );
 
-Map<String, dynamic> _$$AppUser$ToJson(_$AppUser$ instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$AppUser$ToJson(_$AppUser$ instance) => <String, dynamic>{
       'uid': instance.uid,
       'email': instance.email,
       'displayName': instance.displayName,
