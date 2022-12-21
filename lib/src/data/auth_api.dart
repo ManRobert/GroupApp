@@ -6,14 +6,22 @@ class AuthApi {
 
   final FirebaseAuth auth;
 
+  Future<AppUser?> getUser() async {
+    final User? user = auth.currentUser;
+    if (user == null) {
+      return null;
+    }
+    return _convertUser(user);
+  }
+
+  AppUser _convertUser(User user) {
+    return AppUser(uid: user.email!, email: user.email!, displayName: user.displayName!);
+  }
+
   Future<AppUser> login({required String email, required String password}) async {
     final UserCredential credentials = await auth.signInWithEmailAndPassword(email: email, password: password);
     final User user = credentials.user!;
-    return AppUser(
-      uid: user.uid,
-      email: user.email!,
-      displayName: user.displayName!,
-    );
+    return _convertUser(user);
   }
 
   Future<AppUser> createUser({required String email, required String password}) async {
@@ -21,12 +29,7 @@ class AuthApi {
     final User user = credentials.user!;
     final String displayName = email.split('@').first;
     await user.updateDisplayName(displayName);
-
-    return AppUser(
-      uid: user.uid,
-      email: user.email!,
-      displayName: displayName,
-    );
+    return _convertUser(user);
   }
 
   Future<void> logout() async {

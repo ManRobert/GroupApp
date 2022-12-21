@@ -6,10 +6,16 @@ import 'package:group_app/src/models/index.dart';
 
 part 'index.freezed.dart';
 
-part 'login.dart';
+part 'auth/login.dart';
 
-part 'logout.dart';
+part 'auth/logout.dart';
 
-part 'create_user.dart';
+part 'auth/create_user.dart';
+
+part 'auth/initialize_user.dart';
+
+part 'location/get_location.dart';
+
+part 'location/listen_for_location.dart';
 
 typedef ActionResponse = void Function(dynamic action);

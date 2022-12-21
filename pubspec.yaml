@@ -10,6 +10,7 @@ environment:
   sdk: '>=2.18.4 <3.0.0'
 
 dependencies:
+  cloud_firestore: ^4.2.0
   cupertino_icons: ^1.0.2
   firebase_auth: ^4.2.0
   firebase_core: ^2.4.0
@@ -19,6 +20,7 @@ dependencies:
   freezed_annotation: ^2.2.0
   http: ^0.13.5
   json_annotation: ^4.7.0
+  location: ^4.4.0
   redux: ^5.0.0
   redux_epics: ^0.15.1
   rxdart: ^0.27.7
