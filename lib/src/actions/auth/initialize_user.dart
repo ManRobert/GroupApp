@@ -1,7 +1,7 @@
 part of actions;
 
 @freezed
-class InitializeUser with _$InitializeUser   {
+class InitializeUser with _$InitializeUser {
   const factory InitializeUser() = InitializeUserStart;
 
   const factory InitializeUser.successful(AppUser? user) = InitializeUserSuccessful;

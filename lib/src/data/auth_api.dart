@@ -15,7 +15,7 @@ class AuthApi {
   }
 
   AppUser _convertUser(User user) {
-    return AppUser(uid: user.email!, email: user.email!, displayName: user.displayName!);
+    return AppUser(uid: user.uid, email: user.email!, displayName: user.displayName!);
   }
 
   Future<AppUser> login({required String email, required String password}) async {

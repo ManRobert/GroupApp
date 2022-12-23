@@ -3,17 +3,17 @@ import 'package:flutter_redux/flutter_redux.dart';
 import 'package:group_app/src/models/index.dart';
 import 'package:redux/redux.dart';
 
-class UserLocationContainer extends StatelessWidget {
-  const UserLocationContainer({super.key, required this.builder});
+class LocationsContainer extends StatelessWidget {
+  const LocationsContainer({super.key, required this.builder});
 
-  final ViewModelBuilder<UserLocation?> builder;
+  final ViewModelBuilder<List<UserLocation>> builder;
 
   @override
   Widget build(BuildContext context) {
-    return StoreConnector<AppState, UserLocation?>(
+    return StoreConnector<AppState, List<UserLocation>>(
       builder: builder,
       converter: (Store<AppState> store) {
-        return store.state.location.userLocation;
+        return store.state.location.locations;
       },
     );
   }

@@ -67,7 +67,7 @@ _$LocationState$ _$$LocationState$FromJson(Map<String, dynamic> json) =>
           ? null
           : UserLocation.fromJson(json['userLocation'] as Map<String, dynamic>),
       locations: (json['locations'] as List<dynamic>?)
-              ?.map((dynamic e) => UserLocation.fromJson(e as Map<String, dynamic>))
+              ?.map((e) => UserLocation.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const <UserLocation>[],
     );

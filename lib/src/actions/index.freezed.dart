@@ -2002,45 +2002,45 @@ abstract class InitializeUserError implements InitializeUser {
 /// @nodoc
 mixin _$GetLocation {
   @optionalTypeArgs
-  TResult when<TResult extends Object?>(
-    TResult Function() $default, {
-    required TResult Function(UserLocation? location) successful,
+  TResult when<TResult extends Object?>({
+    required TResult Function() start,
+    required TResult Function() done,
     required TResult Function(Object error, StackTrace stackTrace) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function()? $default, {
-    TResult? Function(UserLocation? location)? successful,
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? start,
+    TResult? Function()? done,
     TResult? Function(Object error, StackTrace stackTrace)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>(
-    TResult Function()? $default, {
-    TResult Function(UserLocation? location)? successful,
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? start,
+    TResult Function()? done,
     TResult Function(Object error, StackTrace stackTrace)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object?>(
-    TResult Function(GetLocationStart value) $default, {
-    required TResult Function(GetLocationSuccessful value) successful,
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetLocationStart value) start,
+    required TResult Function(GetLocationDone value) done,
     required TResult Function(GetLocationError value) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(GetLocationStart value)? $default, {
-    TResult? Function(GetLocationSuccessful value)? successful,
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetLocationStart value)? start,
+    TResult? Function(GetLocationDone value)? done,
     TResult? Function(GetLocationError value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>(
-    TResult Function(GetLocationStart value)? $default, {
-    TResult Function(GetLocationSuccessful value)? successful,
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetLocationStart value)? start,
+    TResult Function(GetLocationDone value)? done,
     TResult Function(GetLocationError value)? error,
     required TResult orElse(),
   }) =>
@@ -2088,7 +2088,7 @@ class _$GetLocationStart implements GetLocationStart {
 
   @override
   String toString() {
-    return 'GetLocation()';
+    return 'GetLocation.start()';
   }
 
   @override
@@ -2102,68 +2102,68 @@ class _$GetLocationStart implements GetLocationStart {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>(
-    TResult Function() $default, {
-    required TResult Function(UserLocation? location) successful,
+  TResult when<TResult extends Object?>({
+    required TResult Function() start,
+    required TResult Function() done,
     required TResult Function(Object error, StackTrace stackTrace) error,
   }) {
-    return $default();
+    return start();
   }
 
   @override
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function()? $default, {
-    TResult? Function(UserLocation? location)? successful,
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? start,
+    TResult? Function()? done,
     TResult? Function(Object error, StackTrace stackTrace)? error,
   }) {
-    return $default?.call();
+    return start?.call();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>(
-    TResult Function()? $default, {
-    TResult Function(UserLocation? location)? successful,
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? start,
+    TResult Function()? done,
     TResult Function(Object error, StackTrace stackTrace)? error,
     required TResult orElse(),
   }) {
-    if ($default != null) {
-      return $default();
+    if (start != null) {
+      return start();
     }
     return orElse();
   }
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object?>(
-    TResult Function(GetLocationStart value) $default, {
-    required TResult Function(GetLocationSuccessful value) successful,
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetLocationStart value) start,
+    required TResult Function(GetLocationDone value) done,
     required TResult Function(GetLocationError value) error,
   }) {
-    return $default(this);
+    return start(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(GetLocationStart value)? $default, {
-    TResult? Function(GetLocationSuccessful value)? successful,
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetLocationStart value)? start,
+    TResult? Function(GetLocationDone value)? done,
     TResult? Function(GetLocationError value)? error,
   }) {
-    return $default?.call(this);
+    return start?.call(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>(
-    TResult Function(GetLocationStart value)? $default, {
-    TResult Function(GetLocationSuccessful value)? successful,
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetLocationStart value)? start,
+    TResult Function(GetLocationDone value)? done,
     TResult Function(GetLocationError value)? error,
     required TResult orElse(),
   }) {
-    if ($default != null) {
-      return $default(this);
+    if (start != null) {
+      return start(this);
     }
     return orElse();
   }
@@ -2174,159 +2174,111 @@ abstract class GetLocationStart implements GetLocation {
 }
 
 /// @nodoc
-abstract class _$$GetLocationSuccessfulCopyWith<$Res> {
-  factory _$$GetLocationSuccessfulCopyWith(_$GetLocationSuccessful value,
-          $Res Function(_$GetLocationSuccessful) then) =
-      __$$GetLocationSuccessfulCopyWithImpl<$Res>;
-  @useResult
-  $Res call({UserLocation? location});
-
-  $UserLocationCopyWith<$Res>? get location;
+abstract class _$$GetLocationDoneCopyWith<$Res> {
+  factory _$$GetLocationDoneCopyWith(
+          _$GetLocationDone value, $Res Function(_$GetLocationDone) then) =
+      __$$GetLocationDoneCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$GetLocationSuccessfulCopyWithImpl<$Res>
-    extends _$GetLocationCopyWithImpl<$Res, _$GetLocationSuccessful>
-    implements _$$GetLocationSuccessfulCopyWith<$Res> {
-  __$$GetLocationSuccessfulCopyWithImpl(_$GetLocationSuccessful _value,
-      $Res Function(_$GetLocationSuccessful) _then)
+class __$$GetLocationDoneCopyWithImpl<$Res>
+    extends _$GetLocationCopyWithImpl<$Res, _$GetLocationDone>
+    implements _$$GetLocationDoneCopyWith<$Res> {
+  __$$GetLocationDoneCopyWithImpl(
+      _$GetLocationDone _value, $Res Function(_$GetLocationDone) _then)
       : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? location = freezed,
-  }) {
-    return _then(_$GetLocationSuccessful(
-      freezed == location
-          ? _value.location
-          : location // ignore: cast_nullable_to_non_nullable
-              as UserLocation?,
-    ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $UserLocationCopyWith<$Res>? get location {
-    if (_value.location == null) {
-      return null;
-    }
-
-    return $UserLocationCopyWith<$Res>(_value.location!, (value) {
-      return _then(_value.copyWith(location: value));
-    });
-  }
 }
 
 /// @nodoc
 
-class _$GetLocationSuccessful implements GetLocationSuccessful {
-  const _$GetLocationSuccessful(this.location);
-
-  @override
-  final UserLocation? location;
+class _$GetLocationDone implements GetLocationDone {
+  const _$GetLocationDone();
 
   @override
   String toString() {
-    return 'GetLocation.successful(location: $location)';
+    return 'GetLocation.done()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GetLocationSuccessful &&
-            (identical(other.location, location) ||
-                other.location == location));
+        (other.runtimeType == runtimeType && other is _$GetLocationDone);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, location);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$GetLocationSuccessfulCopyWith<_$GetLocationSuccessful> get copyWith =>
-      __$$GetLocationSuccessfulCopyWithImpl<_$GetLocationSuccessful>(
-          this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>(
-    TResult Function() $default, {
-    required TResult Function(UserLocation? location) successful,
+  TResult when<TResult extends Object?>({
+    required TResult Function() start,
+    required TResult Function() done,
     required TResult Function(Object error, StackTrace stackTrace) error,
   }) {
-    return successful(location);
+    return done();
   }
 
   @override
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function()? $default, {
-    TResult? Function(UserLocation? location)? successful,
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? start,
+    TResult? Function()? done,
     TResult? Function(Object error, StackTrace stackTrace)? error,
   }) {
-    return successful?.call(location);
+    return done?.call();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>(
-    TResult Function()? $default, {
-    TResult Function(UserLocation? location)? successful,
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? start,
+    TResult Function()? done,
     TResult Function(Object error, StackTrace stackTrace)? error,
     required TResult orElse(),
   }) {
-    if (successful != null) {
-      return successful(location);
+    if (done != null) {
+      return done();
     }
     return orElse();
   }
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object?>(
-    TResult Function(GetLocationStart value) $default, {
-    required TResult Function(GetLocationSuccessful value) successful,
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetLocationStart value) start,
+    required TResult Function(GetLocationDone value) done,
     required TResult Function(GetLocationError value) error,
   }) {
-    return successful(this);
+    return done(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(GetLocationStart value)? $default, {
-    TResult? Function(GetLocationSuccessful value)? successful,
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetLocationStart value)? start,
+    TResult? Function(GetLocationDone value)? done,
     TResult? Function(GetLocationError value)? error,
   }) {
-    return successful?.call(this);
+    return done?.call(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>(
-    TResult Function(GetLocationStart value)? $default, {
-    TResult Function(GetLocationSuccessful value)? successful,
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetLocationStart value)? start,
+    TResult Function(GetLocationDone value)? done,
     TResult Function(GetLocationError value)? error,
     required TResult orElse(),
   }) {
-    if (successful != null) {
-      return successful(this);
+    if (done != null) {
+      return done(this);
     }
     return orElse();
   }
 }
 
-abstract class GetLocationSuccessful implements GetLocation {
-  const factory GetLocationSuccessful(final UserLocation? location) =
-      _$GetLocationSuccessful;
-
-  UserLocation? get location;
-  @JsonKey(ignore: true)
-  _$$GetLocationSuccessfulCopyWith<_$GetLocationSuccessful> get copyWith =>
-      throw _privateConstructorUsedError;
+abstract class GetLocationDone implements GetLocation {
+  const factory GetLocationDone() = _$GetLocationDone;
 }
 
 /// @nodoc
@@ -2399,9 +2351,9 @@ class _$GetLocationError implements GetLocationError {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>(
-    TResult Function() $default, {
-    required TResult Function(UserLocation? location) successful,
+  TResult when<TResult extends Object?>({
+    required TResult Function() start,
+    required TResult Function() done,
     required TResult Function(Object error, StackTrace stackTrace) error,
   }) {
     return error(this.error, stackTrace);
@@ -2409,9 +2361,9 @@ class _$GetLocationError implements GetLocationError {
 
   @override
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function()? $default, {
-    TResult? Function(UserLocation? location)? successful,
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? start,
+    TResult? Function()? done,
     TResult? Function(Object error, StackTrace stackTrace)? error,
   }) {
     return error?.call(this.error, stackTrace);
@@ -2419,9 +2371,9 @@ class _$GetLocationError implements GetLocationError {
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>(
-    TResult Function()? $default, {
-    TResult Function(UserLocation? location)? successful,
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? start,
+    TResult Function()? done,
     TResult Function(Object error, StackTrace stackTrace)? error,
     required TResult orElse(),
   }) {
@@ -2433,9 +2385,9 @@ class _$GetLocationError implements GetLocationError {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object?>(
-    TResult Function(GetLocationStart value) $default, {
-    required TResult Function(GetLocationSuccessful value) successful,
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetLocationStart value) start,
+    required TResult Function(GetLocationDone value) done,
     required TResult Function(GetLocationError value) error,
   }) {
     return error(this);
@@ -2443,9 +2395,9 @@ class _$GetLocationError implements GetLocationError {
 
   @override
   @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(GetLocationStart value)? $default, {
-    TResult? Function(GetLocationSuccessful value)? successful,
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetLocationStart value)? start,
+    TResult? Function(GetLocationDone value)? done,
     TResult? Function(GetLocationError value)? error,
   }) {
     return error?.call(this);
@@ -2453,9 +2405,9 @@ class _$GetLocationError implements GetLocationError {
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>(
-    TResult Function(GetLocationStart value)? $default, {
-    TResult Function(GetLocationSuccessful value)? successful,
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetLocationStart value)? start,
+    TResult Function(GetLocationDone value)? done,
     TResult Function(GetLocationError value)? error,
     required TResult orElse(),
   }) {
@@ -2475,4 +2427,616 @@ abstract class GetLocationError implements GetLocation {
   @JsonKey(ignore: true)
   _$$GetLocationErrorCopyWith<_$GetLocationError> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+mixin _$ListenForLocations {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() start,
+    required TResult Function() done,
+    required TResult Function(List<UserLocation> locations) event,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? start,
+    TResult? Function()? done,
+    TResult? Function(List<UserLocation> locations)? event,
+    TResult? Function(Object error, StackTrace stackTrace)? error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? start,
+    TResult Function()? done,
+    TResult Function(List<UserLocation> locations)? event,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ListenForLocationsStart value) start,
+    required TResult Function(ListenForLocationsDone value) done,
+    required TResult Function(OnLocationsEvent value) event,
+    required TResult Function(_ListenForLocationsError value) error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ListenForLocationsStart value)? start,
+    TResult? Function(ListenForLocationsDone value)? done,
+    TResult? Function(OnLocationsEvent value)? event,
+    TResult? Function(_ListenForLocationsError value)? error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ListenForLocationsStart value)? start,
+    TResult Function(ListenForLocationsDone value)? done,
+    TResult Function(OnLocationsEvent value)? event,
+    TResult Function(_ListenForLocationsError value)? error,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ListenForLocationsCopyWith<$Res> {
+  factory $ListenForLocationsCopyWith(
+          ListenForLocations value, $Res Function(ListenForLocations) then) =
+      _$ListenForLocationsCopyWithImpl<$Res, ListenForLocations>;
+}
+
+/// @nodoc
+class _$ListenForLocationsCopyWithImpl<$Res, $Val extends ListenForLocations>
+    implements $ListenForLocationsCopyWith<$Res> {
+  _$ListenForLocationsCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+}
+
+/// @nodoc
+abstract class _$$ListenForLocationsStartCopyWith<$Res> {
+  factory _$$ListenForLocationsStartCopyWith(_$ListenForLocationsStart value,
+          $Res Function(_$ListenForLocationsStart) then) =
+      __$$ListenForLocationsStartCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ListenForLocationsStartCopyWithImpl<$Res>
+    extends _$ListenForLocationsCopyWithImpl<$Res, _$ListenForLocationsStart>
+    implements _$$ListenForLocationsStartCopyWith<$Res> {
+  __$$ListenForLocationsStartCopyWithImpl(_$ListenForLocationsStart _value,
+      $Res Function(_$ListenForLocationsStart) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ListenForLocationsStart implements ListenForLocationsStart {
+  const _$ListenForLocationsStart();
+
+  @override
+  String toString() {
+    return 'ListenForLocations.start()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ListenForLocationsStart);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() start,
+    required TResult Function() done,
+    required TResult Function(List<UserLocation> locations) event,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) {
+    return start();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? start,
+    TResult? Function()? done,
+    TResult? Function(List<UserLocation> locations)? event,
+    TResult? Function(Object error, StackTrace stackTrace)? error,
+  }) {
+    return start?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? start,
+    TResult Function()? done,
+    TResult Function(List<UserLocation> locations)? event,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if (start != null) {
+      return start();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ListenForLocationsStart value) start,
+    required TResult Function(ListenForLocationsDone value) done,
+    required TResult Function(OnLocationsEvent value) event,
+    required TResult Function(_ListenForLocationsError value) error,
+  }) {
+    return start(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ListenForLocationsStart value)? start,
+    TResult? Function(ListenForLocationsDone value)? done,
+    TResult? Function(OnLocationsEvent value)? event,
+    TResult? Function(_ListenForLocationsError value)? error,
+  }) {
+    return start?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ListenForLocationsStart value)? start,
+    TResult Function(ListenForLocationsDone value)? done,
+    TResult Function(OnLocationsEvent value)? event,
+    TResult Function(_ListenForLocationsError value)? error,
+    required TResult orElse(),
+  }) {
+    if (start != null) {
+      return start(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ListenForLocationsStart implements ListenForLocations {
+  const factory ListenForLocationsStart() = _$ListenForLocationsStart;
+}
+
+/// @nodoc
+abstract class _$$ListenForLocationsDoneCopyWith<$Res> {
+  factory _$$ListenForLocationsDoneCopyWith(_$ListenForLocationsDone value,
+          $Res Function(_$ListenForLocationsDone) then) =
+      __$$ListenForLocationsDoneCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ListenForLocationsDoneCopyWithImpl<$Res>
+    extends _$ListenForLocationsCopyWithImpl<$Res, _$ListenForLocationsDone>
+    implements _$$ListenForLocationsDoneCopyWith<$Res> {
+  __$$ListenForLocationsDoneCopyWithImpl(_$ListenForLocationsDone _value,
+      $Res Function(_$ListenForLocationsDone) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ListenForLocationsDone implements ListenForLocationsDone {
+  const _$ListenForLocationsDone();
+
+  @override
+  String toString() {
+    return 'ListenForLocations.done()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$ListenForLocationsDone);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() start,
+    required TResult Function() done,
+    required TResult Function(List<UserLocation> locations) event,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) {
+    return done();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? start,
+    TResult? Function()? done,
+    TResult? Function(List<UserLocation> locations)? event,
+    TResult? Function(Object error, StackTrace stackTrace)? error,
+  }) {
+    return done?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? start,
+    TResult Function()? done,
+    TResult Function(List<UserLocation> locations)? event,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if (done != null) {
+      return done();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ListenForLocationsStart value) start,
+    required TResult Function(ListenForLocationsDone value) done,
+    required TResult Function(OnLocationsEvent value) event,
+    required TResult Function(_ListenForLocationsError value) error,
+  }) {
+    return done(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ListenForLocationsStart value)? start,
+    TResult? Function(ListenForLocationsDone value)? done,
+    TResult? Function(OnLocationsEvent value)? event,
+    TResult? Function(_ListenForLocationsError value)? error,
+  }) {
+    return done?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ListenForLocationsStart value)? start,
+    TResult Function(ListenForLocationsDone value)? done,
+    TResult Function(OnLocationsEvent value)? event,
+    TResult Function(_ListenForLocationsError value)? error,
+    required TResult orElse(),
+  }) {
+    if (done != null) {
+      return done(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ListenForLocationsDone implements ListenForLocations {
+  const factory ListenForLocationsDone() = _$ListenForLocationsDone;
+}
+
+/// @nodoc
+abstract class _$$OnLocationsEventCopyWith<$Res> {
+  factory _$$OnLocationsEventCopyWith(
+          _$OnLocationsEvent value, $Res Function(_$OnLocationsEvent) then) =
+      __$$OnLocationsEventCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<UserLocation> locations});
+}
+
+/// @nodoc
+class __$$OnLocationsEventCopyWithImpl<$Res>
+    extends _$ListenForLocationsCopyWithImpl<$Res, _$OnLocationsEvent>
+    implements _$$OnLocationsEventCopyWith<$Res> {
+  __$$OnLocationsEventCopyWithImpl(
+      _$OnLocationsEvent _value, $Res Function(_$OnLocationsEvent) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? locations = null,
+  }) {
+    return _then(_$OnLocationsEvent(
+      null == locations
+          ? _value._locations
+          : locations // ignore: cast_nullable_to_non_nullable
+              as List<UserLocation>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OnLocationsEvent implements OnLocationsEvent {
+  const _$OnLocationsEvent(final List<UserLocation> locations)
+      : _locations = locations;
+
+  final List<UserLocation> _locations;
+  @override
+  List<UserLocation> get locations {
+    if (_locations is EqualUnmodifiableListView) return _locations;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_locations);
+  }
+
+  @override
+  String toString() {
+    return 'ListenForLocations.event(locations: $locations)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnLocationsEvent &&
+            const DeepCollectionEquality()
+                .equals(other._locations, _locations));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_locations));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OnLocationsEventCopyWith<_$OnLocationsEvent> get copyWith =>
+      __$$OnLocationsEventCopyWithImpl<_$OnLocationsEvent>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() start,
+    required TResult Function() done,
+    required TResult Function(List<UserLocation> locations) event,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) {
+    return event(locations);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? start,
+    TResult? Function()? done,
+    TResult? Function(List<UserLocation> locations)? event,
+    TResult? Function(Object error, StackTrace stackTrace)? error,
+  }) {
+    return event?.call(locations);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? start,
+    TResult Function()? done,
+    TResult Function(List<UserLocation> locations)? event,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if (event != null) {
+      return event(locations);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ListenForLocationsStart value) start,
+    required TResult Function(ListenForLocationsDone value) done,
+    required TResult Function(OnLocationsEvent value) event,
+    required TResult Function(_ListenForLocationsError value) error,
+  }) {
+    return event(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ListenForLocationsStart value)? start,
+    TResult? Function(ListenForLocationsDone value)? done,
+    TResult? Function(OnLocationsEvent value)? event,
+    TResult? Function(_ListenForLocationsError value)? error,
+  }) {
+    return event?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ListenForLocationsStart value)? start,
+    TResult Function(ListenForLocationsDone value)? done,
+    TResult Function(OnLocationsEvent value)? event,
+    TResult Function(_ListenForLocationsError value)? error,
+    required TResult orElse(),
+  }) {
+    if (event != null) {
+      return event(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class OnLocationsEvent implements ListenForLocations {
+  const factory OnLocationsEvent(final List<UserLocation> locations) =
+      _$OnLocationsEvent;
+
+  List<UserLocation> get locations;
+  @JsonKey(ignore: true)
+  _$$OnLocationsEventCopyWith<_$OnLocationsEvent> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_ListenForLocationsErrorCopyWith<$Res> {
+  factory _$$_ListenForLocationsErrorCopyWith(_$_ListenForLocationsError value,
+          $Res Function(_$_ListenForLocationsError) then) =
+      __$$_ListenForLocationsErrorCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Object error, StackTrace stackTrace});
+}
+
+/// @nodoc
+class __$$_ListenForLocationsErrorCopyWithImpl<$Res>
+    extends _$ListenForLocationsCopyWithImpl<$Res, _$_ListenForLocationsError>
+    implements _$$_ListenForLocationsErrorCopyWith<$Res> {
+  __$$_ListenForLocationsErrorCopyWithImpl(_$_ListenForLocationsError _value,
+      $Res Function(_$_ListenForLocationsError) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? error = null,
+    Object? stackTrace = null,
+  }) {
+    return _then(_$_ListenForLocationsError(
+      null == error ? _value.error : error,
+      null == stackTrace
+          ? _value.stackTrace
+          : stackTrace // ignore: cast_nullable_to_non_nullable
+              as StackTrace,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_ListenForLocationsError implements _ListenForLocationsError {
+  const _$_ListenForLocationsError(this.error, this.stackTrace);
+
+  @override
+  final Object error;
+  @override
+  final StackTrace stackTrace;
+
+  @override
+  String toString() {
+    return 'ListenForLocations.error(error: $error, stackTrace: $stackTrace)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ListenForLocationsError &&
+            const DeepCollectionEquality().equals(other.error, error) &&
+            (identical(other.stackTrace, stackTrace) ||
+                other.stackTrace == stackTrace));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(error), stackTrace);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ListenForLocationsErrorCopyWith<_$_ListenForLocationsError>
+      get copyWith =>
+          __$$_ListenForLocationsErrorCopyWithImpl<_$_ListenForLocationsError>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() start,
+    required TResult Function() done,
+    required TResult Function(List<UserLocation> locations) event,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) {
+    return error(this.error, stackTrace);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? start,
+    TResult? Function()? done,
+    TResult? Function(List<UserLocation> locations)? event,
+    TResult? Function(Object error, StackTrace stackTrace)? error,
+  }) {
+    return error?.call(this.error, stackTrace);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? start,
+    TResult Function()? done,
+    TResult Function(List<UserLocation> locations)? event,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this.error, stackTrace);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ListenForLocationsStart value) start,
+    required TResult Function(ListenForLocationsDone value) done,
+    required TResult Function(OnLocationsEvent value) event,
+    required TResult Function(_ListenForLocationsError value) error,
+  }) {
+    return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ListenForLocationsStart value)? start,
+    TResult? Function(ListenForLocationsDone value)? done,
+    TResult? Function(OnLocationsEvent value)? event,
+    TResult? Function(_ListenForLocationsError value)? error,
+  }) {
+    return error?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ListenForLocationsStart value)? start,
+    TResult Function(ListenForLocationsDone value)? done,
+    TResult Function(OnLocationsEvent value)? event,
+    TResult Function(_ListenForLocationsError value)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ListenForLocationsError implements ListenForLocations {
+  const factory _ListenForLocationsError(
+          final Object error, final StackTrace stackTrace) =
+      _$_ListenForLocationsError;
+
+  Object get error;
+  StackTrace get stackTrace;
+  @JsonKey(ignore: true)
+  _$$_ListenForLocationsErrorCopyWith<_$_ListenForLocationsError>
+      get copyWith => throw _privateConstructorUsedError;
 }
