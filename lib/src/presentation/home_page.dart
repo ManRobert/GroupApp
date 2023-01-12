@@ -36,6 +36,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void dispose() {
     _store.dispatch(const ListenForLocations.done());
+    _store.dispatch(const ListenForUsers.done());
     super.dispose();
   }
 
