@@ -4,9 +4,7 @@ analyzer:
   errors:
     invalid_annotation_target: ignore
   exclude:
-    -"lib/**/*g.dart"
-    -"lib/**/*.freezed.dart"
-    -"lib/**/*home_page.dart"
+    [ lib/src/presentation/home_page.dart ]
 
 linter:
   rules:
