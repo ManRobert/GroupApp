@@ -20,8 +20,9 @@ Map<String, dynamic> _$$AppState$ToJson(_$AppState$ instance) => <String, dynami
 
 _$AuthState$ _$$AuthState$FromJson(Map<String, dynamic> json) => _$AuthState$(
       user: json['user'] == null ? null : AppUser.fromJson(json['user'] as Map<String, dynamic>),
-      users: (json['users'] as List<dynamic>?)?.map((dynamic e) => AppUser.fromJson(e as Map<String, dynamic>)).toList() ??
-          const <AppUser>[],
+      users:
+          (json['users'] as List<dynamic>?)?.map((dynamic e) => AppUser.fromJson(e as Map<String, dynamic>)).toList() ??
+              const <AppUser>[],
     );
 
 Map<String, dynamic> _$$AuthState$ToJson(_$AuthState$ instance) => <String, dynamic>{
