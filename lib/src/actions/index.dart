@@ -14,6 +14,8 @@ part 'auth/create_user.dart';
 
 part 'auth/initialize_user.dart';
 
+part 'auth/listen_for_users.dart';
+
 part 'location/get_location.dart';
 
 part 'location/listen_for_location.dart';

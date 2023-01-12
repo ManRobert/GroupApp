@@ -15,6 +15,7 @@ class AuthEpics {
       TypedEpic<AppState, LogoutStart>(_logoutStart),
       TypedEpic<AppState, CreateUserStart>(_createUserStart),
       TypedEpic<AppState, InitializeUserStart>(_initializeUserStart),
+      listenForUsersStart,
     ]);
   }
 
@@ -54,5 +55,15 @@ class AuthEpics {
           .map((AppUser? user) => InitializeUser.successful(user))
           .onErrorReturnWith((Object error, StackTrace stackTrace) => InitializeUser.error(error, stackTrace)),
     );
+  }
+
+  Stream<dynamic> listenForUsersStart(Stream<dynamic> actions, EpicStore<AppState> store) {
+    return actions.whereType<ListenForLocationsStart>().flatMap(
+          (ListenForLocationsStart action) => Stream<void>.value(null)
+              .flatMap((_) => _api.getUsers())
+              .map((List<AppUser> users) => ListenForUsers.event(users))
+              .takeUntil(actions.whereType<ListenForLocationsDone>())
+              .onErrorReturnWith((Object error, StackTrace stackTrace) => ListenForUsers.error(error, stackTrace)),
+        );
   }
 }

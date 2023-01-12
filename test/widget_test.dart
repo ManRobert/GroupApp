@@ -27,7 +27,7 @@ void main() {
     // Build our app and trigger a frame.
     WidgetsFlutterBinding.ensureInitialized();
     await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-    final AuthApi authApi = AuthApi(auth: FirebaseAuth.instance);
+    final AuthApi authApi = AuthApi(auth: FirebaseAuth.instance, firestore: FirebaseFirestore.instance);
     final LocationApi locationApi = LocationApi(location: Location(), firestore: FirebaseFirestore.instance);
     final AppEpics epics = AppEpics(authApi: authApi, locationApi: locationApi);
     final Store<AppState> store = Store<AppState>(

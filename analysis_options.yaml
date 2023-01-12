@@ -6,6 +6,7 @@ analyzer:
   exclude:
     -"lib/**/*g.dart"
     -"lib/**/*.freezed.dart"
+    [ lib/src/presentation/home_page.dart ]
 
 linter:
   rules:

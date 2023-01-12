@@ -1942,6 +1942,600 @@ abstract class InitializeUserError implements InitializeUser {
 }
 
 /// @nodoc
+mixin _$ListenForUsers {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() start,
+    required TResult Function() done,
+    required TResult Function(List<AppUser> users) event,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) =>
+      throw _privateConstructorUsedError;
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? start,
+    TResult? Function()? done,
+    TResult? Function(List<AppUser> users)? event,
+    TResult? Function(Object error, StackTrace stackTrace)? error,
+  }) =>
+      throw _privateConstructorUsedError;
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? start,
+    TResult Function()? done,
+    TResult Function(List<AppUser> users)? event,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ListenForUsersStart value) start,
+    required TResult Function(ListenForUsersDone value) done,
+    required TResult Function(OnUsersEvent value) event,
+    required TResult Function(_ListenForUsersError value) error,
+  }) =>
+      throw _privateConstructorUsedError;
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ListenForUsersStart value)? start,
+    TResult? Function(ListenForUsersDone value)? done,
+    TResult? Function(OnUsersEvent value)? event,
+    TResult? Function(_ListenForUsersError value)? error,
+  }) =>
+      throw _privateConstructorUsedError;
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ListenForUsersStart value)? start,
+    TResult Function(ListenForUsersDone value)? done,
+    TResult Function(OnUsersEvent value)? event,
+    TResult Function(_ListenForUsersError value)? error,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ListenForUsersCopyWith<$Res> {
+  factory $ListenForUsersCopyWith(ListenForUsers value, $Res Function(ListenForUsers) then) =
+      _$ListenForUsersCopyWithImpl<$Res, ListenForUsers>;
+}
+
+/// @nodoc
+class _$ListenForUsersCopyWithImpl<$Res, $Val extends ListenForUsers> implements $ListenForUsersCopyWith<$Res> {
+  _$ListenForUsersCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+}
+
+/// @nodoc
+abstract class _$$ListenForUsersStartCopyWith<$Res> {
+  factory _$$ListenForUsersStartCopyWith(_$ListenForUsersStart value, $Res Function(_$ListenForUsersStart) then) =
+      __$$ListenForUsersStartCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ListenForUsersStartCopyWithImpl<$Res> extends _$ListenForUsersCopyWithImpl<$Res, _$ListenForUsersStart>
+    implements _$$ListenForUsersStartCopyWith<$Res> {
+  __$$ListenForUsersStartCopyWithImpl(_$ListenForUsersStart _value, $Res Function(_$ListenForUsersStart) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ListenForUsersStart implements ListenForUsersStart {
+  const _$ListenForUsersStart();
+
+  @override
+  String toString() {
+    return 'ListenForUsers.start()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$ListenForUsersStart);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() start,
+    required TResult Function() done,
+    required TResult Function(List<AppUser> users) event,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) {
+    return start();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? start,
+    TResult? Function()? done,
+    TResult? Function(List<AppUser> users)? event,
+    TResult? Function(Object error, StackTrace stackTrace)? error,
+  }) {
+    return start?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? start,
+    TResult Function()? done,
+    TResult Function(List<AppUser> users)? event,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if (start != null) {
+      return start();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ListenForUsersStart value) start,
+    required TResult Function(ListenForUsersDone value) done,
+    required TResult Function(OnUsersEvent value) event,
+    required TResult Function(_ListenForUsersError value) error,
+  }) {
+    return start(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ListenForUsersStart value)? start,
+    TResult? Function(ListenForUsersDone value)? done,
+    TResult? Function(OnUsersEvent value)? event,
+    TResult? Function(_ListenForUsersError value)? error,
+  }) {
+    return start?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ListenForUsersStart value)? start,
+    TResult Function(ListenForUsersDone value)? done,
+    TResult Function(OnUsersEvent value)? event,
+    TResult Function(_ListenForUsersError value)? error,
+    required TResult orElse(),
+  }) {
+    if (start != null) {
+      return start(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ListenForUsersStart implements ListenForUsers {
+  const factory ListenForUsersStart() = _$ListenForUsersStart;
+}
+
+/// @nodoc
+abstract class _$$ListenForUsersDoneCopyWith<$Res> {
+  factory _$$ListenForUsersDoneCopyWith(_$ListenForUsersDone value, $Res Function(_$ListenForUsersDone) then) =
+      __$$ListenForUsersDoneCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ListenForUsersDoneCopyWithImpl<$Res> extends _$ListenForUsersCopyWithImpl<$Res, _$ListenForUsersDone>
+    implements _$$ListenForUsersDoneCopyWith<$Res> {
+  __$$ListenForUsersDoneCopyWithImpl(_$ListenForUsersDone _value, $Res Function(_$ListenForUsersDone) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ListenForUsersDone implements ListenForUsersDone {
+  const _$ListenForUsersDone();
+
+  @override
+  String toString() {
+    return 'ListenForUsers.done()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$ListenForUsersDone);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() start,
+    required TResult Function() done,
+    required TResult Function(List<AppUser> users) event,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) {
+    return done();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? start,
+    TResult? Function()? done,
+    TResult? Function(List<AppUser> users)? event,
+    TResult? Function(Object error, StackTrace stackTrace)? error,
+  }) {
+    return done?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? start,
+    TResult Function()? done,
+    TResult Function(List<AppUser> users)? event,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if (done != null) {
+      return done();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ListenForUsersStart value) start,
+    required TResult Function(ListenForUsersDone value) done,
+    required TResult Function(OnUsersEvent value) event,
+    required TResult Function(_ListenForUsersError value) error,
+  }) {
+    return done(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ListenForUsersStart value)? start,
+    TResult? Function(ListenForUsersDone value)? done,
+    TResult? Function(OnUsersEvent value)? event,
+    TResult? Function(_ListenForUsersError value)? error,
+  }) {
+    return done?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ListenForUsersStart value)? start,
+    TResult Function(ListenForUsersDone value)? done,
+    TResult Function(OnUsersEvent value)? event,
+    TResult Function(_ListenForUsersError value)? error,
+    required TResult orElse(),
+  }) {
+    if (done != null) {
+      return done(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ListenForUsersDone implements ListenForUsers {
+  const factory ListenForUsersDone() = _$ListenForUsersDone;
+}
+
+/// @nodoc
+abstract class _$$OnUsersEventCopyWith<$Res> {
+  factory _$$OnUsersEventCopyWith(_$OnUsersEvent value, $Res Function(_$OnUsersEvent) then) =
+      __$$OnUsersEventCopyWithImpl<$Res>;
+
+  @useResult
+  $Res call({List<AppUser> users});
+}
+
+/// @nodoc
+class __$$OnUsersEventCopyWithImpl<$Res> extends _$ListenForUsersCopyWithImpl<$Res, _$OnUsersEvent>
+    implements _$$OnUsersEventCopyWith<$Res> {
+  __$$OnUsersEventCopyWithImpl(_$OnUsersEvent _value, $Res Function(_$OnUsersEvent) _then) : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? users = null,
+  }) {
+    return _then(_$OnUsersEvent(
+      null == users
+          ? _value._users
+          : users // ignore: cast_nullable_to_non_nullable
+              as List<AppUser>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OnUsersEvent implements OnUsersEvent {
+  const _$OnUsersEvent(final List<AppUser> users) : _users = users;
+
+  final List<AppUser> _users;
+
+  @override
+  List<AppUser> get users {
+    if (_users is EqualUnmodifiableListView) return _users;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_users);
+  }
+
+  @override
+  String toString() {
+    return 'ListenForUsers.event(users: $users)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnUsersEvent &&
+            const DeepCollectionEquality().equals(other._users, _users));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_users));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OnUsersEventCopyWith<_$OnUsersEvent> get copyWith =>
+      __$$OnUsersEventCopyWithImpl<_$OnUsersEvent>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() start,
+    required TResult Function() done,
+    required TResult Function(List<AppUser> users) event,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) {
+    return event(users);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? start,
+    TResult? Function()? done,
+    TResult? Function(List<AppUser> users)? event,
+    TResult? Function(Object error, StackTrace stackTrace)? error,
+  }) {
+    return event?.call(users);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? start,
+    TResult Function()? done,
+    TResult Function(List<AppUser> users)? event,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if (event != null) {
+      return event(users);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ListenForUsersStart value) start,
+    required TResult Function(ListenForUsersDone value) done,
+    required TResult Function(OnUsersEvent value) event,
+    required TResult Function(_ListenForUsersError value) error,
+  }) {
+    return event(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ListenForUsersStart value)? start,
+    TResult? Function(ListenForUsersDone value)? done,
+    TResult? Function(OnUsersEvent value)? event,
+    TResult? Function(_ListenForUsersError value)? error,
+  }) {
+    return event?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ListenForUsersStart value)? start,
+    TResult Function(ListenForUsersDone value)? done,
+    TResult Function(OnUsersEvent value)? event,
+    TResult Function(_ListenForUsersError value)? error,
+    required TResult orElse(),
+  }) {
+    if (event != null) {
+      return event(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class OnUsersEvent implements ListenForUsers {
+  const factory OnUsersEvent(final List<AppUser> users) = _$OnUsersEvent;
+
+  List<AppUser> get users;
+
+  @JsonKey(ignore: true)
+  _$$OnUsersEventCopyWith<_$OnUsersEvent> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_ListenForUsersErrorCopyWith<$Res> {
+  factory _$$_ListenForUsersErrorCopyWith(_$_ListenForUsersError value, $Res Function(_$_ListenForUsersError) then) =
+      __$$_ListenForUsersErrorCopyWithImpl<$Res>;
+
+  @useResult
+  $Res call({Object error, StackTrace stackTrace});
+}
+
+/// @nodoc
+class __$$_ListenForUsersErrorCopyWithImpl<$Res> extends _$ListenForUsersCopyWithImpl<$Res, _$_ListenForUsersError>
+    implements _$$_ListenForUsersErrorCopyWith<$Res> {
+  __$$_ListenForUsersErrorCopyWithImpl(_$_ListenForUsersError _value, $Res Function(_$_ListenForUsersError) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? error = null,
+    Object? stackTrace = null,
+  }) {
+    return _then(_$_ListenForUsersError(
+      null == error ? _value.error : error,
+      null == stackTrace
+          ? _value.stackTrace
+          : stackTrace // ignore: cast_nullable_to_non_nullable
+              as StackTrace,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_ListenForUsersError implements _ListenForUsersError {
+  const _$_ListenForUsersError(this.error, this.stackTrace);
+
+  @override
+  final Object error;
+  @override
+  final StackTrace stackTrace;
+
+  @override
+  String toString() {
+    return 'ListenForUsers.error(error: $error, stackTrace: $stackTrace)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ListenForUsersError &&
+            const DeepCollectionEquality().equals(other.error, error) &&
+            (identical(other.stackTrace, stackTrace) || other.stackTrace == stackTrace));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(error), stackTrace);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ListenForUsersErrorCopyWith<_$_ListenForUsersError> get copyWith =>
+      __$$_ListenForUsersErrorCopyWithImpl<_$_ListenForUsersError>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() start,
+    required TResult Function() done,
+    required TResult Function(List<AppUser> users) event,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) {
+    return error(this.error, stackTrace);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? start,
+    TResult? Function()? done,
+    TResult? Function(List<AppUser> users)? event,
+    TResult? Function(Object error, StackTrace stackTrace)? error,
+  }) {
+    return error?.call(this.error, stackTrace);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? start,
+    TResult Function()? done,
+    TResult Function(List<AppUser> users)? event,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this.error, stackTrace);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ListenForUsersStart value) start,
+    required TResult Function(ListenForUsersDone value) done,
+    required TResult Function(OnUsersEvent value) event,
+    required TResult Function(_ListenForUsersError value) error,
+  }) {
+    return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ListenForUsersStart value)? start,
+    TResult? Function(ListenForUsersDone value)? done,
+    TResult? Function(OnUsersEvent value)? event,
+    TResult? Function(_ListenForUsersError value)? error,
+  }) {
+    return error?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ListenForUsersStart value)? start,
+    TResult Function(ListenForUsersDone value)? done,
+    TResult Function(OnUsersEvent value)? event,
+    TResult Function(_ListenForUsersError value)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ListenForUsersError implements ListenForUsers {
+  const factory _ListenForUsersError(final Object error, final StackTrace stackTrace) = _$_ListenForUsersError;
+
+  Object get error;
+
+  StackTrace get stackTrace;
+
+  @JsonKey(ignore: true)
+  _$$_ListenForUsersErrorCopyWith<_$_ListenForUsersError> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$GetLocation {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
